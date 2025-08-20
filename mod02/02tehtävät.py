@@ -78,23 +78,23 @@ print(f'Massa on {kilot} kiloa ja {kilojen_lisagrammat:.2f} grammaa.')
 
 # kolminumeroinen koodi (0, 9):
 
-num10=random.randint(0,9)
-num11=random.randint(0,9)
-num12=random.randint(0,9)
+num1_0=random.randint(0,9)
+num1_1=random.randint(0,9)
+num1_2=random.randint(0,9)
 
-kolminumeroinen_koodi = str(num10) + str(num11) + str(num12)
+kolminumeroinen_koodi = str(num1_0) + str(num1_1) + str(num1_2)
 
 print(f'Kolminumeroinen koodisi on: {kolminumeroinen_koodi}') #esim. 965
 
 
 #nelinumeroinen koodi (1, 6)
 
-num20=random.randint(1,6)
-num21=random.randint(1,6)
-num22=random.randint(1,6)
-num23=random.randint(1,6)
+num2_0=random.randint(1,6)
+num2_1=random.randint(1,6)
+num2_2=random.randint(1,6)
+num2_3=random.randint(1,6)
 
-nelinumeroinen_koodi = str(num20) + str(num21) + str(num22) + str(num23)
+nelinumeroinen_koodi = str(num2_0) + str(num2_1) + str(num2_2) + str(num2_3)
 
 print(f'Nelinumeroinen koodisi on: {nelinumeroinen_koodi}') #esim. 3542
 
