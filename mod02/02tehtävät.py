@@ -30,9 +30,9 @@ suorakulmion_piiri = print(f'suorakulmion_piiri_on: {2 * suorakulmion_kanta + 2 
 # Tehtävä 4 Kirjoita ohjelma, joka kysyy kolme kokonaislukua.
         # Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
 
-kokonaisluku1 = float(input('Mikä on ensimmäinen kokonaisluku?'))
-kokonaisluku2 = float(input('Mikä on toinen kokonaisluku?'))
-kokonaisluku3 = float(input('Mikä on kolmas kokonaisluku?'))
+kokonaisluku1 = int(input('Mikä on ensimmäinen kokonaisluku?'))
+kokonaisluku2 = int(input('Mikä on toinen kokonaisluku?'))
+kokonaisluku3 = int(input('Mikä on kolmas kokonaisluku?'))
 
 lukujen_summa = print(f'lukujen summa: {kokonaisluku1 + kokonaisluku2 + kokonaisluku3}')
 
@@ -52,8 +52,8 @@ lukujen_keskiarvo = print(f'lukujen keskiarvo: {(kokonaisluku1 + kokonaisluku2 +
 
 #kysytään arvot keskiaikaisina mittoina
 
-leiviskat = float(input('Anna leivisköjen määrä:'))
-naulat = float(input('Anna naulojen määrä:'))
+leiviskat = int(input('Anna leivisköjen määrä:'))
+naulat = int(input('Anna naulojen määrä:'))
 luodit = float(input('Anna luotien määrä:'))
 
 # Muunnetaan kaikki saadut arvot grammoiksi
