@@ -5,6 +5,7 @@ monirivinen kommentti (merkkijono, string)
 voidaan myös sijoittaa muuttujaan
 """""
 import math
+import random
 
 nimi = input("Anna nimesi: ") # palauttaa merkkijonon (str)
 ika = 20 #kokonaisluku (int)
@@ -52,6 +53,10 @@ print(f"Jakolaskun tulos: {luku1 / luku2:.2f}, jossa kokonaisosa on "
 # ympyrän ala: pi * r^2: 3.149 * r^2
 # piin arvo math-kirjastosta (import-lause tiedoston alussa tarvitaan (rivillä 7))
 print(math.pi)
+
+# satunnaisluvun generointi:
+print(random.randint(1, 6))
+
 
 
 
