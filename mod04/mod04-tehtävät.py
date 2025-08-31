@@ -70,8 +70,8 @@ while True:
 # Tätä jatketaan kunnes kirjautumistiedot ovat oikein tai väärät tiedot on syötetty viisi kertaa.
 # Edellisessä tapauksessa tulostetaan Tervetuloa ja jälkimmäisessä Pääsy evätty. (Oikea käyttäjätunnus on python ja salasana rules).
 
-oikea käyttäjätunnus = konstah
-oikea salasana = salakala
+# oikea käyttäjätunnus = konstah
+# oikea salasana = salakala
 
 maksimiyritykset = 5
 yritykset = 0
