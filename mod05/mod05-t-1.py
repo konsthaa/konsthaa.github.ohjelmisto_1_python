@@ -3,9 +3,10 @@
 
 import random
 
-arpakuutiot = int(input("arpakuutioiden määrä: "))
-arpakuution_numero = random.randint(1, 6)
-silmalukujen_summa = arpakuutiot * arpakuution_numero
-
-for arpakuution_numero in arpakuutiot:
-    print(sum(silmalukujen_summa))
+arpakuutiot = input("arpakuutioiden määrä: ")
+summa = 0
+for i in range(int(arpakuutiot)):
+    heitto = random.randint(1,6)
+    print(f"arpakuutio {i + 1}: {heitto}")
+    summa += heitto
+print(f"silmälukujen summa: {summa}")
