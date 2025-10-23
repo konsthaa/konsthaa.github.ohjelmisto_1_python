@@ -1,4 +1,4 @@
-# mod09 t 2
+# mod09 t, 2
 
 class Auto:
     def __init__(self, registernumber, topspeed):

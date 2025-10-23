@@ -1,4 +1,4 @@
-# Mod09 tehtävä 1
+# Mod09 tehtävät, 1
 
 class Auto:
     def __init__(self, registernumber, topspeed):
