@@ -1,6 +1,6 @@
 # mod09 t, 2
 
-class Auto:
+class Car:
     def __init__(self, registernumber, topspeed):
         self.register_number = registernumber
         self.top_speed = topspeed
@@ -16,7 +16,7 @@ class Auto:
 
 
 # Pääohjelma
-auto = Auto("ABC-123", 142)
+auto = Car("ABC-123", 142)
 print("Register Number:", auto.register_number)
 print("Top Speed:", auto.top_speed, "km/h")
 print("Present Speed:", auto.speed, "km/h")
