@@ -54,9 +54,9 @@ class Talo:
         self.hissit[hissi_numero - 1].siirry_kerrokseen(kohde_kerros)
 
 
-# PÄÄOHJELMA - TESTAUS
+# Pääohjelman testaus
 if __name__ == "__main__":
-    # Luodaan talo kerroksilla 1-10 ja 3 hissillä
+    # Luodaan talo kerroksilla 1-10 ja jossa on kolme hissiä
     talo = Talo(1, 10, 3)
 
     print("Talo luotu 3 hissillä. Kaikki hissit aloittavat kerroksesta 1.")
@@ -78,5 +78,5 @@ if __name__ == "__main__":
     talo.aja_hissia(1, 1)
     print()
 
-    # Virheellinen hissi (esim. 4)
+    # Virheellinen hissi. esimerkiksi hissi nro. 4
     talo.aja_hissia(4, 5)

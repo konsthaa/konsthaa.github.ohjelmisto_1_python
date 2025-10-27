@@ -41,7 +41,7 @@ class Hissi:
             print(f"Hissi on jo kerroksessa {kohde}")
 
 
-# PÄÄOHJELMA - TESTAUS
+# Pääohjelman testaus
 if __name__ == "__main__":
     # Luodaan hissi kerroksista 1-10
     h = Hissi(1, 10)
@@ -53,5 +53,5 @@ if __name__ == "__main__":
     h.siirry_kerrokseen(6)
     print()
 
-    # Palataan takaisin alimpaan kerrokseen (1)
+    # Palataan takaisin 1. kerrokseen
     h.siirry_kerrokseen(1)

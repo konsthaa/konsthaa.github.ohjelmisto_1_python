@@ -57,9 +57,9 @@ class Talo:
             hissi.siirry_kerrokseen(self.alin)
 
 
-# PÄÄOHJELMA - TESTAUS
+# Pääohjelman testaus
 if __name__ == "__main__":
-    # Luodaan talo kerroksilla 1-10 ja 3 hissillä
+    # Luodaan talo kerroksilla 1-10 ja kolmella hissillä
     talo = Talo(1, 10, 3)
 
     print("Talo luotu 3 hissillä. Kaikki hissit aloittavat kerroksesta 1.")
