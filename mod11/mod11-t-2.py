@@ -1,50 +1,50 @@
-# Auto-yliluokka
-class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
-        self.nopeus = 0  # nykyinen nopeus
-        self.matka = 0   # matkamittari
+# Auto-yläluokka
+class Car:
+    def __init__(self, reg_number, top_speed):
+        self.reg_number = reg_number
+        self.top_speed = top_speed
+        self.speed = 0  # nopeus nyt
+        self.trip = 0   # matkan pituutta mittaava mittari
 
-    def aja(self, tunnit):
-        """Ajaa annetun ajan tunneissa nykyisellä nopeudella."""
-        self.matka += self.nopeus * tunnit
-
-
-# Sähköauto-aliluokka
-class Sähköauto(Auto):
-    def __init__(self, rekisteritunnus, huippunopeus, akkukapasiteetti_kwh):
-        super().__init__(rekisteritunnus, huippunopeus)
-        self.akkukapasiteetti = akkukapasiteetti_kwh
+    def drive(self, hours):
+        # Ajetaan annetun ajan verran tunneissa
+        self.trip += self.speed * hours
 
 
-# Polttomoottoriauto-aliluokka
-class Polttomoottoriauto(Auto):
-    def __init__(self, rekisteritunnus, huippunopeus, bensatankki_litraa):
-        super().__init__(rekisteritunnus, huippunopeus)
-        self.bensatankki = bensatankki_litraa
+# Sähköauto-alaluokka
+class Electric(Car):
+    def __init__(self, reg_number, top_speed, battery_capacity_kwh):
+        super().__init__(reg_number, top_speed)
+        self.akkukapasiteetti = battery_capacity_kwh
+
+
+# Polttomoottoriauto-alaluokka
+class Combustion(Car):
+    def __init__(self, reg_number, top_speed, gastank_litres):
+        super().__init__(reg_number, top_speed)
+        self.gastank = gastank_litres
 
 
 # Pääohjelma
 def main():
     # Luodaan autot
-    sahkoauto = Sähköauto("ABC-15", 180, 52.5)
-    bensaauto = Polttomoottoriauto("ACD-123", 165, 32.3)
+    electriccar = Electric("ABC-15", 180, 52.5)
+    combustioncar = Combustion("ACD-123", 165, 32.3)
 
-    # Asetetaan nopeudet
-    sahkoauto.nopeus = 120  # km/h
-    bensaauto.nopeus = 140  # km/h
+    # nopeudet
+    electriccar.speed = 120  # km/h
+    combustioncar.speed = 140  # km/h
 
     # Ajetaan 3 tuntia
-    sahkoauto.aja(3)
-    bensaauto.aja(3)
+    electriccar.drive(3)
+    combustioncar.drive(3)
 
     # Tulostetaan matkamittarilukemat
-    print(f"Sähköauto {sahkoauto.rekisteritunnus}:")
-    print(f"  Matka: {sahkoauto.matka} km")
+    print(f"Sähköauto {electriccar.reg_number}:")
+    print(f"  Matka: {electriccar.trip} km")
 
-    print(f"Polttomoottoriauto {bensaauto.rekisteritunnus}:")
-    print(f"  Matka: {bensaauto.matka} km")
+    print(f"Polttomoottoriauto {combustioncar.reg_number}:")
+    print(f"  Matka: {combustioncar.trip} km")
 
 
 if __name__ == "__main__":
