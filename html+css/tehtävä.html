@@ -1,0 +1,267 @@
+html + css tehtävä
+
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Yrityksen sivusto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fontit -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* -------------------------------------------------
+           Väripaletti & perusfontit
+        ------------------------------------------------- */
+        :root {
+            --clr-primary:   #2c3e50;   /* tumma sininen */
+            --clr-accent:    #e74c3c;   /* kirkas punainen */
+            --clr-bg:        #f8f9fa;   /* vaalea tausta */
+            --clr-light:     #ecf0f1;   /* vaalean harmaa */
+            --clr-text:      #333;      /* teksti */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--clr-bg);
+            color: var(--clr-text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* -------------------------------------------------
+           Yleiset apuluokat
+        ------------------------------------------------- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 60px 0; }
+        .text-center { text-align: center; }
+
+        /* -------------------------------------------------
+           Navigaatio
+        ------------------------------------------------- */
+        nav {
+            background: var(--clr-primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: inline-block;
+            transition: background .3s;
+        }
+        nav a:hover, nav a.active { background: var(--clr-accent); }
+
+        /* -------------------------------------------------
+           Hero (Home)
+        ------------------------------------------------- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+                        url('https://images.unsplash.com/photo-1519389950470-47ba2b3b3b9b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: .5rem; }
+        .hero p  { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+        .btn {
+            background: var(--clr-accent);
+            color: #fff;
+            padding: .8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .btn:hover { background: #c0392b; }
+
+        /* -------------------------------------------------
+           Sisältöalueet (kaikki sivut)
+        ------------------------------------------------- */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        /* Products – kortit */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,.1);
+            transition: transform .3s;
+        }
+        .card:hover { transform: translateY(-8px); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-body { padding: 1.5rem; }
+        .card h3 { margin-top: 0; }
+
+        /* Contact – lomake */
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.1);
+        }
+        .contact-form label { display: block; margin-top: 1rem; font-weight: 600; }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: .8rem;
+            margin-top: .4rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font: inherit;
+        }
+        .contact-form button {
+            margin-top: 1.5rem;
+            background: var(--clr-accent);
+            color: #fff;
+            border: none;
+            padding: .8rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .contact-form button:hover { background: #c0392b; }
+
+        /* Footer */
+        footer {
+            background: var(--clr-primary);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigaatio -->
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="products">Products</a>
+            <a href="#" class="nav-link" data-page="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ========= HOME ========= -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <h1>Tervetuloa yritykseemme</h1>
+                <p>Laadukkaat ratkaisut ja erinomainen palvelu – kaikki samasta paikasta.</p>
+                <a href="#" class="btn nav-link" data-page="products">Tutustu tuotteisiin</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container text-center">
+                <h2>Miksi valita meidät?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= PRODUCTS ========= -->
+    <section id="products" class="page">
+        <div class="section">
+            <div class="container text-center">
+                <h2>Tuotteemme</h2>
+                <p>Valikoimassamme on monipuolisia ratkaisuja erilaisiin tarpeisiin.</p>
+
+                <div class="product-grid">
+                    <!-- Tuote 1 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Tuote 1">
+                        <div class="card-body">
+                            <h3>Alfa</h3>
+                            <p>Innovatiivinen laite, joka tehostaa arkeasi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tuote 2 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Tuote 2">
+                        <div class="card-body">
+                            <h3>Beta</h3>
+                            <p>Tehokas ja kestävä ratkaisu ammattilaisille.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tuote 3 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Tuote 3">
+                        <div class="card-body">
+                            <h3>Gamma</h3>
+                            <p>Helppokäyttöinen ja ympäristöystävällinen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= CONTACT ========= -->
+    <section id="contact" class="page">
+        <div class="section">
+            <div class="container text-center">
+                <h2>Ota yhteyttä</h2>
+                <p>Meille on ilo kuulla sinusta! Täytä alla oleva lomake.</p>
+
+                <form class="contact-form">
+                    <label for="name">Nimi</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">Sähköposti</label>
+                    <input type="email" id="email" required>
+
+                    <label for="message">Viesti</label>
+                    <textarea id="message" rows="5" required></textarea>
+
+                    <button type="submit">Lähetä</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yrityksesi. Kaikki oikeudet pidätetään.</p>
+        </div>
+    </footer>
+
+    <!-- Sivunvaihto (vain CSS) -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Poista aktiivinen luokka kaikilta
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+                // Lisää aktiivinen luokka valitulle
+                this.classList.add('active');
+                const target = this.getAttribute('data-page');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>

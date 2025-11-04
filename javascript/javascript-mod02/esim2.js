@@ -57,3 +57,50 @@ for (const index in fruits) {
 
 
 // Näin lisäät arrayhin tietoa:
+
+fruits.sort();
+console.log(fruits);
+fruits.reverse();
+console.log(fruits);
+
+// ei toimi numeroiden kanssa kovinkaan hyvin'
+
+const ages = [2300, 28, 33, 19, 2000];
+ages.sort();
+console.log(ages);
+
+// Tämä toimii numeroiden kanssa
+ages.sort(((a, b) => a - b));
+console.log(ages);
+ages.sort((a, b) => b - a);
+console.log(ages);
+
+// shift() deletes and returns the 1st item in the array
+// pop() deletes and returns the last item in the array
+// push(value) adds the value at the end of the array, multiple values separately
+// includes(value) checks whether the array contains the given value
+
+let hedelmat = ['Banaani', 'Mango', 'Päärynä', 'Omena'];
+
+// shift() poistetaan taulukon eka arvo ja otetaan muuttuja talteen'
+const hedelma = hedelmat.shift();
+console.log('Poistettiin', hedelma);
+console.log(hedelmat);
+
+
+// unshift lisää taulukon alkuun
+
+hedelmat.unshift('Kiwi');
+console.log(hedelmat);
+
+// sama kuin shift mutta vika
+const vika = hedelmat.pop();
+console.log('Poistettiin', vika);
+console.log(hedelmat);
+
+hedelmat.push('Satsuma', 'Mandariini');
+console.log(hedelmat);
+
+// includes tsekkaa onko arvo taulukossa ja palauttaa true/false
+console.log(hedelmat.includes('Kiwi'));
+

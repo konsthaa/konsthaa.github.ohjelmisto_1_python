@@ -5,11 +5,10 @@ print('Hei, Konsta Haapaniemi')
 print("moi 'Konsta'")
 print("Hyvää Huomenta \nKonsta")
 print(8)
-
+print("jake haisee")
 # yksinkertainen muuttuja
-nimi= 'Konsta'
-print(nimi)
-
+#nimi= 'Konsta'
+#print(nimi)
 
 # syöte, eli tietoa käyttäjältä
 nimi2=input('Moikka, anna nimesi: ')
