@@ -3,19 +3,19 @@
 function out(s){document.getElementById('out').innerHTML=s;}
 const task=[];
 
-/* 1 */
+//tehtävä 1
 task[1]=function(){
   console.log("I'm printing to console!");
   out('<p>Check console (F12)</p>');
 };
 
-/* 2 */
+//tehtävä 2
 task[2]=function(){
   const name=prompt('What is your name?')||'';
   out('<h3>Hello, '+name+'!</h3>');
 };
 
-/* 3 */
+//tehtävä 3
 task[3]=function(){
   const a=+prompt('First integer:');
   const b=+prompt('Second integer:');
@@ -25,7 +25,7 @@ task[3]=function(){
   out('<p>Sum: <b>'+sum+'</b></p><p>Product: <b>'+prod+'</b></p><p>Average: <b>'+(avg).toFixed(2)+'</b></p>');
 };
 
-/* 4 */
+// tehtävä 4
 task[4]=function(){
   const name=prompt('Student name:')||'';
   const r=Math.floor(Math.random()*4)+1;
@@ -33,14 +33,14 @@ task[4]=function(){
   out('<h3>'+name+', you are '+h[r-1]+'.</h3>');
 };
 
-/* 5 */
+//tehtävä 5
 task[5]=function(){
   const y=+prompt('Year:');
   const leap=(y%4===0 && y%100!==0)||(y%400===0);
   out('<h3>'+y+' '+(leap?'is':'is not')+' a leap year.</h3>');
 };
 
-/* 6 */
+//tehtävä 6
 task[6]=function(){
   if(!confirm('Calculate square root?')) return out('<h3>The square root is not calculated.</h3>');
   const n=+prompt('Number:');
@@ -49,7 +49,7 @@ task[6]=function(){
   out('<h3>Square root of '+n+' = '+Math.sqrt(n).toFixed(4)+'</h3>');
 };
 
-/* 7 */
+//tehtävä 7
 task[7]=function(){
   const d=+prompt('How many dice?');
   if(isNaN(d)||d<1) return out('<p>Invalid!</p>');
@@ -58,7 +58,7 @@ task[7]=function(){
   out('<h3>Sum of '+d+' dice: <b>'+s+'</b></h3>');
 };
 
-/* 8 */
+//tehtävä 8
 task[8]=function(){
   const s=+prompt('Start year:'), e=+prompt('End year:');
   if(isNaN(s)||isNaN(e)||s>e) return out('<p>Invalid range!</p>');
@@ -69,7 +69,7 @@ task[8]=function(){
   out(list?'<ul>'+list+'</ul>':'<p>No leap years.</p>');
 };
 
-/* 9 */
+//tehtävä 9
 task[9]=function(){
   const n=+prompt('Integer:');
   if(isNaN(n)||n<=1) return out('<h3>'+n+' is not prime.</h3>');
@@ -78,7 +78,7 @@ task[9]=function(){
   out('<h3>'+n+' '+(p?'is':'is not')+' a prime number.</h3>');
 };
 
-/* 10 */
+//tehtävä 10
 task[10]=function(){
   const dice=+prompt('Number of dice:');
   const target=+prompt('Target sum:');
